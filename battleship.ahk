@@ -1,6 +1,6 @@
 #Warn
 #NoEnv
-SendMode, Input 
+
 SetWorkingDir %A_ScriptDir%\Resources\
 
 Menu, FileMenu, Add, &Start, FileStart
@@ -624,9 +624,13 @@ return
 HelpAbout:
 Gui, About:+owner1  ; Make the main window (Gui #1) the owner of the "about box".
 Gui +Disabled  ; Disable main window.
-Gui, About:Add, Text, , https://en.wikipedia.org/wiki/Battleship_(game)
+Gui, About:Add, Text, gLaunchRules, Click here to see the game rules.`nSee github.com\mattahk\ahk-battleship for development details.`nGo to github.com\mattahk for other autohotkey games.
 Gui, About:Add, Button, Default, OK
 Gui, About:Show
+return
+
+LaunchRules:
+Run https://www.cs.nmsu.edu/~bdu/TA/487/brules.htm
 return
 
 AboutButtonOK:  ; This section is used by the "about box" above.
@@ -635,6 +639,15 @@ AboutGuiEscape:
 Gui, 1:-Disabled  ; Re-enable the main window (must be done prior to the next step).
 Gui Destroy  ; Destroy the about box.
 return
+
+OnError("LogError")
+%cause% := error
+
+LogError(exception) {
+    FileAppend % "Error on line " exception.Line ": " exception.Message "`n"
+        , errorlog.txt
+    return true
+}
 
 FileExit:     ; User chose "Exit" from the File menu.
 GuiClose:
