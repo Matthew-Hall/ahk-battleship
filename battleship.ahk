@@ -23,17 +23,6 @@ Gui, Add, GroupBox, x22 y379 w330 h330 ,
 Gui, Add, Text, x375 y12 w110 h12 cFFFFFF, Chat
 Gui, Add, GroupBox, x375 y19 w110 h330 ,
 
-Gui, Add, Text, x375 y382 w110 h12 cFFFFFF, Shipyard
-Gui, Add, GroupBox, x375 y389 w110 h300 ,
-Gui, Add, Picture, x380 y402 w30 h150 gPickup, %A_WorkingDir%\5boat.png
-Gui, Add, Picture, x415 y402 w30 h120 gPickup, %A_WorkingDir%\4boat.png
-Gui, Add, Picture, x450 y402 w30 h90 gPickup, %A_WorkingDir%\sboat.png
-Gui, Add, Picture, x380 y557 w30 h90 gPickup, %A_WorkingDir%\3boat.png
-Gui, Add, Picture, x415 y557 w30 h60 gPickup, %A_WorkingDir%\2boat.png
-Gui, Add, Picture, x380 y652 w30 h30 gWhiteChoice, %A_WorkingDir%\peggedbox.png
-Gui, Add, Picture, x415 y652 w30 h30 gRedChoice, %A_WorkingDir%\redpeggedbox.png
-Gui, Add, Picture, x450 y652 w30 h30 gBackChoice, %A_WorkingDir%\gridbox.png
-
 Gui, Add, Text, x375 y689 w30 h30 cFFFFFF, Kills
 Gui, Add, Checkbox, x375 y700 w25,
 Gui, Add, Checkbox, x400 y700 w25,
@@ -185,6 +174,17 @@ Gui, Add, Picture, x210 y660 w30 h30 , %A_WorkingDir%\gridbox.png
 Gui, Add, Picture, x240 y660 w30 h30 , %A_WorkingDir%\gridbox.png
 Gui, Add, Picture, x270 y660 w30 h30 , %A_WorkingDir%\gridbox.png
 Gui, Add, Picture, x300 y660 w30 h30 , %A_WorkingDir%\gridbox.png
+
+Gui, Add, Text, x375 y382 w110 h12 cFFFFFF, Shipyard
+Gui, Add, GroupBox, x375 y389 w110 h300 ,
+Gui, Add, Picture, x380 y402 w30 h150 gPickup, %A_WorkingDir%\5boat.png
+Gui, Add, Picture, x415 y402 w30 h120 gPickup, %A_WorkingDir%\4boat.png
+Gui, Add, Picture, x450 y402 w30 h90 gPickup, %A_WorkingDir%\sboat.png
+Gui, Add, Picture, x380 y557 w30 h90 gPickup, %A_WorkingDir%\3boat.png
+Gui, Add, Picture, x415 y557 w30 h60 gPickup, %A_WorkingDir%\2boat.png
+Gui, Add, Picture, x380 y652 w30 h30 gWhiteChoice, %A_WorkingDir%\peggedbox.png
+Gui, Add, Picture, x415 y652 w30 h30 gRedChoice, %A_WorkingDir%\redpeggedbox.png
+Gui, Add, Picture, x450 y652 w30 h30 gBackChoice, %A_WorkingDir%\gridbox.png
 
 Gui, Add, Button, x393 y349 w75 h20 , Send
 Gui, Add, Button, x75 y349 w75 h20 , Hit
