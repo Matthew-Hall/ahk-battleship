@@ -25,14 +25,15 @@ Gui, Add, GroupBox, x375 y19 w110 h330 ,
 
 Gui, Add, Text, x375 y382 w110 h12 cFFFFFF, Shipyard
 Gui, Add, GroupBox, x375 y389 w110 h300 ,
-Gui, Add, Picture, x380 y402 w30 h150, %A_WorkingDir%\5boat.png
-Gui, Add, Picture, x415 y402 w30 h120, %A_WorkingDir%\4boat.png
-Gui, Add, Picture, x450 y402 w30 h90, %A_WorkingDir%\sboat.png
-Gui, Add, Picture, x380 y557 w30 h90, %A_WorkingDir%\3boat.png
-Gui, Add, Picture, x415 y557 w30 h60, %A_WorkingDir%\2boat.png
+Gui, Add, Picture, x380 y402 w30 h150 gPickup, %A_WorkingDir%\5boat.png
+Gui, Add, Picture, x415 y402 w30 h120 gPickup, %A_WorkingDir%\4boat.png
+Gui, Add, Picture, x450 y402 w30 h90 gPickup, %A_WorkingDir%\sboat.png
+Gui, Add, Picture, x380 y557 w30 h90 gPickup, %A_WorkingDir%\3boat.png
+Gui, Add, Picture, x415 y557 w30 h60 gPickup, %A_WorkingDir%\2boat.png
 Gui, Add, Picture, x380 y652 w30 h30 gWhiteChoice, %A_WorkingDir%\peggedbox.png
 Gui, Add, Picture, x415 y652 w30 h30 gRedChoice, %A_WorkingDir%\redpeggedbox.png
 Gui, Add, Picture, x450 y652 w30 h30 gBackChoice, %A_WorkingDir%\gridbox.png
+
 Gui, Add, Text, x375 y689 w30 h30 cFFFFFF, Kills
 Gui, Add, Checkbox, x375 y700 w25,
 Gui, Add, Checkbox, x400 y700 w25,
@@ -609,6 +610,24 @@ return
 Target100:
 Gui, Add, Picture, x300 y300 w30 h30 , %A_WorkingDir%\%pegchoice%
 return
+
+
+;-------------------------------------------------------------------------------
+Pickup(hCtrl) { ; to be placed on a grid of squares credit: wolf_II https://autohotkey.com/boards/viewtopic.php?f=76&t=58201&sid=24683803aa57eff4c9885fced5befd57
+;-------------------------------------------------------------------------------
+    GuiControlGet, Ctrl_, Pos, %hCtrl%
+    GuiControlGet, Picked,, %hCtrl%
+    MouseGetPos, x0, y0
+
+    While GetKeyState("LButton") {
+        MouseGetPos, MouseX, MouseY
+        new_X := Ctrl_X + MouseX - x0
+        new_Y := Ctrl_Y + MouseY - y0
+        GuiControl, Move, %hCtrl%, x%new_X% y%new_Y%
+    }
+    GuiControl, Move, %hCtrl%, x%new_X% y%new_Y%
+}
+
 
 FileUpdate: 
 {
