@@ -1,5 +1,6 @@
 #Warn
 #NoEnv
+#SingleInstance Off
 
 SetWorkingDir %A_ScriptDir%\Resources\
 
@@ -177,14 +178,15 @@ Gui, Add, Picture, x300 y660 w30 h30 , %A_WorkingDir%\gridbox.png
 
 Gui, Add, Text, x375 y382 w110 h12 cFFFFFF, Shipyard
 Gui, Add, GroupBox, x375 y389 w110 h300 ,
-Gui, Add, Picture, x380 y402 w30 h150 gPickup, %A_WorkingDir%\5boat.png
-Gui, Add, Picture, x415 y402 w30 h120 gPickup, %A_WorkingDir%\4boat.png
-Gui, Add, Picture, x450 y402 w30 h90 gPickup, %A_WorkingDir%\sboat.png
-Gui, Add, Picture, x380 y557 w30 h90 gPickup, %A_WorkingDir%\3boat.png
-Gui, Add, Picture, x415 y557 w30 h60 gPickup, %A_WorkingDir%\2boat.png
+Gui, Add, Picture, x380 y402 w30 h150 v5BoatV gPickup, %A_WorkingDir%\5boat.png
+Gui, Add, Picture, x415 y402 w30 h120 v4BoatV gPickup, %A_WorkingDir%\4boat.png
+Gui, Add, Picture, x450 y402 w30 h90 vSBoatV gPickup, %A_WorkingDir%\sboat.png
+Gui, Add, Picture, x380 y557 w30 h90 v3BoatV gPickup, %A_WorkingDir%\3boat.png
+Gui, Add, Picture, x415 y557 w30 h60 v2BoatV gPickup, %A_WorkingDir%\2boat.png
 Gui, Add, Picture, x380 y652 w30 h30 gWhiteChoice, %A_WorkingDir%\peggedbox.png
 Gui, Add, Picture, x415 y652 w30 h30 gRedChoice, %A_WorkingDir%\redpeggedbox.png
 Gui, Add, Picture, x450 y652 w30 h30 gBackChoice, %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x450 y617 w30 h30 gRotato, %A_WorkingDir%\rotato.png
 
 Gui, Add, Button, x393 y349 w75 h20 , Send
 Gui, Add, Button, x75 y349 w75 h20 , Hit
@@ -613,6 +615,13 @@ Target100:
 Gui, Add, Picture, x300 y300 w30 h30 , %A_WorkingDir%\%pegchoice%
 return
 
+Rotato:
+Gui, Add, Picture, x380 y402 w60 h30 gPickup , %A_WorkingDir%\2boatr.png
+Gui, Add, Picture, x380 y437 w90 h30 gPickup , %A_WorkingDir%\3boatr.png
+Gui, Add, Picture, x380 y472 w90 h30 gPickup , %A_WorkingDir%\sboatr.png
+Gui, Add, Picture, x380 y507 w120 h30 gPickup , %A_WorkingDir%\4boatr.png
+Gui, Add, Picture, x380 y542 w150 h30 gPickup , %A_WorkingDir%\5boatr.png
+return
 
 ;-------------------------------------------------------------------------------
 Pickup(hCtrl) { ; to be placed on a grid of squares credit: wolf_II https://autohotkey.com/boards/viewtopic.php?f=76&t=58201&sid=24683803aa57eff4c9885fced5befd57
