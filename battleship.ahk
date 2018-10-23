@@ -207,6 +207,8 @@ pegchoice = gridbox.png
 return
 
 FileStart:
+random, rand, 1, 9999
+MsgBox You rolled %rand%.`nDecide who goes first then click OK.
 pegchoice = peggedbox.png
 Gui, Add, Picture, x30 y30 w30 h30 gTarget1, %A_WorkingDir%\gridbox.png
 Gui, Add, Picture, x60 y30 w30 h30 gTarget2, %A_WorkingDir%\gridbox.png
