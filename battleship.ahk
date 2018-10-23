@@ -1,9 +1,10 @@
 #Warn
 #NoEnv
 SendMode, Input 
-SetWorkingDir %A_ScriptDir%
+SetWorkingDir %A_ScriptDir%\Resources\
 
 Menu, FileMenu, Add, &Start, FileStart
+Menu, FileMenu, Add, &Check for Update, FileUpdate
 Menu, FileMenu, Add, E&xit, FileExit
 
 Menu, HelpMenu, Add, &About, HelpAbout
@@ -31,12 +32,57 @@ Gui, Add, Picture, x380 y557 w30 h90, %A_WorkingDir%\3boat.png
 Gui, Add, Picture, x415 y557 w30 h60, %A_WorkingDir%\2boat.png
 Gui, Add, Picture, x380 y652 w30 h30 gWhiteChoice, %A_WorkingDir%\peggedbox.png
 Gui, Add, Picture, x415 y652 w30 h30 gRedChoice, %A_WorkingDir%\redpeggedbox.png
+Gui, Add, Picture, x450 y652 w30 h30 gBackChoice, %A_WorkingDir%\gridbox.png
 Gui, Add, Text, x375 y689 w30 h30 cFFFFFF, Kills
 Gui, Add, Checkbox, x375 y700 w25,
 Gui, Add, Checkbox, x400 y700 w25,
 Gui, Add, Checkbox, x425 y700 w25,
 Gui, Add, Checkbox, x450 y700 w25,
 Gui, Add, Checkbox, x475 y700 w25,
+
+Gui, Add, Text, x333 y398 w10 h12 cFFFFFF, A
+Gui, Add, Text, x333 y428 w10 h12 cFFFFFF, B
+Gui, Add, Text, x333 y458 w10 h12 cFFFFFF, C
+Gui, Add, Text, x333 y488 w10 h12 cFFFFFF, D
+Gui, Add, Text, x333 y518 w10 h12 cFFFFFF, E
+Gui, Add, Text, x333 y548 w10 h12 cFFFFFF, F
+Gui, Add, Text, x333 y578 w10 h12 cFFFFFF, G
+Gui, Add, Text, x333 y608 w10 h12 cFFFFFF, H
+Gui, Add, Text, x333 y638 w10 h12 cFFFFFF, I
+Gui, Add, Text, x333 y668 w10 h12 cFFFFFF, J
+
+Gui, Add, Text, x41 y691 w10 h12 cFFFFFF, 1
+Gui, Add, Text, x71 y691 w10 h12 cFFFFFF, 2
+Gui, Add, Text, x101 y691 w10 h12 cFFFFFF, 3
+Gui, Add, Text, x131 y691 w10 h12 cFFFFFF, 4
+Gui, Add, Text, x161 y691 w10 h12 cFFFFFF, 5
+Gui, Add, Text, x191 y691 w10 h12 cFFFFFF, 6
+Gui, Add, Text, x221 y691 w10 h12 cFFFFFF, 7
+Gui, Add, Text, x251 y691 w10 h12 cFFFFFF, 8
+Gui, Add, Text, x281 y691 w10 h12 cFFFFFF, 9
+Gui, Add, Text, x309 y691 w12 h12 cFFFFFF, 10
+
+Gui, Add, Text, x333 y38 w10 h12 cFFFFFF, A
+Gui, Add, Text, x333 y68 w10 h12 cFFFFFF, B
+Gui, Add, Text, x333 y98 w10 h12 cFFFFFF, C
+Gui, Add, Text, x333 y128 w10 h12 cFFFFFF, D
+Gui, Add, Text, x333 y158 w10 h12 cFFFFFF, E
+Gui, Add, Text, x333 y188 w10 h12 cFFFFFF, F
+Gui, Add, Text, x333 y218 w10 h12 cFFFFFF, G
+Gui, Add, Text, x333 y248 w10 h12 cFFFFFF, H
+Gui, Add, Text, x333 y278 w10 h12 cFFFFFF, I
+Gui, Add, Text, x333 y308 w10 h12 cFFFFFF, J
+
+Gui, Add, Text, x41 y331 w10 h12 cFFFFFF, 1
+Gui, Add, Text, x71 y331 w10 h12 cFFFFFF, 2
+Gui, Add, Text, x101 y331 w10 h12 cFFFFFF, 3
+Gui, Add, Text, x131 y331 w10 h12 cFFFFFF, 4
+Gui, Add, Text, x161 y331 w10 h12 cFFFFFF, 5
+Gui, Add, Text, x191 y331 w10 h12 cFFFFFF, 6
+Gui, Add, Text, x221 y331 w10 h12 cFFFFFF, 7
+Gui, Add, Text, x251 y331 w10 h12 cFFFFFF, 8
+Gui, Add, Text, x281 y331 w10 h12 cFFFFFF, 9
+Gui, Add, Text, x309 y331 w12 h12 cFFFFFF, 10
 
 Gui, Add, Picture, x30 y390 w30 h30 , %A_WorkingDir%\gridbox.png
 Gui, Add, Picture, x60 y390 w30 h30 , %A_WorkingDir%\gridbox.png
@@ -48,6 +94,96 @@ Gui, Add, Picture, x210 y390 w30 h30 , %A_WorkingDir%\gridbox.png
 Gui, Add, Picture, x240 y390 w30 h30 , %A_WorkingDir%\gridbox.png
 Gui, Add, Picture, x270 y390 w30 h30 , %A_WorkingDir%\gridbox.png
 Gui, Add, Picture, x300 y390 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x30 y420 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x60 y420 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x90 y420 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x120 y420 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x150 y420 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x180 y420 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x210 y420 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x240 y420 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x270 y420 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x300 y420 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x30 y450 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x60 y450 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x90 y450 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x120 y450 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x150 y450 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x180 y450 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x210 y450 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x240 y450 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x270 y450 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x300 y450 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x30 y480 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x60 y480 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x90 y480 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x120 y480 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x150 y480 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x180 y480 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x210 y480 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x240 y480 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x270 y480 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x300 y480 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x30 y510 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x60 y510 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x90 y510 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x120 y510 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x150 y510 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x180 y510 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x210 y510 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x240 y510 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x270 y510 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x300 y510 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x30 y540 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x60 y540 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x90 y540 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x120 y540 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x150 y540 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x180 y540 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x210 y540 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x240 y540 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x270 y540 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x300 y540 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x30 y570 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x60 y570 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x90 y570 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x120 y570 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x150 y570 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x180 y570 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x210 y570 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x240 y570 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x270 y570 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x300 y570 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x30 y600 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x60 y600 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x90 y600 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x120 y600 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x150 y600 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x180 y600 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x210 y600 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x240 y600 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x270 y600 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x300 y600 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x30 y630 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x60 y630 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x90 y630 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x120 y630 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x150 y630 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x180 y630 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x210 y630 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x240 y630 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x270 y630 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x300 y630 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x30 y660 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x60 y660 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x90 y660 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x120 y660 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x150 y660 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x180 y660 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x210 y660 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x240 y660 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x270 y660 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x300 y660 w30 h30 , %A_WorkingDir%\gridbox.png
 
 Gui, Add, Button, x393 y349 w75 h20 , Send
 Gui, Add, Button, x75 y349 w75 h20 , Hit
@@ -65,7 +201,12 @@ RedChoice:
 pegchoice = redpeggedbox.png
 return
 
+BackChoice:
+pegchoice = gridbox.png
+return
+
 FileStart:
+pegchoice = peggedbox.png
 Gui, Add, Picture, x30 y30 w30 h30 gTarget1, %A_WorkingDir%\gridbox.png
 Gui, Add, Picture, x60 y30 w30 h30 gTarget2, %A_WorkingDir%\gridbox.png
 Gui, Add, Picture, x90 y30 w30 h30 gTarget3, %A_WorkingDir%\gridbox.png
@@ -467,6 +608,17 @@ Gui, Add, Picture, x270 y300 w30 h30 , %A_WorkingDir%\%pegchoice%
 return
 Target100:
 Gui, Add, Picture, x300 y300 w30 h30 , %A_WorkingDir%\%pegchoice%
+return
+
+FileUpdate: 
+{
+	FileReadLine, VNum, %A_WorkingDir%\..\version.txt, 1
+	MsgBox, 4, Battleship, Version %VNum% See GitHub for further information.`nWould you like to check for updates and download the most recent version? It will be placed in the current folder under update.zip.
+	IfMsgBox Yes
+		{
+		Run, %A_WorkingDir%\..\update.ahk
+	}
+}
 return
 
 HelpAbout:
