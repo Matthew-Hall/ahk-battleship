@@ -37,4 +37,5 @@ MsgBox, 1, Press OK to download, Your current version is %Vnum%. This latest is 
 			MsgBox, The update/ download appears to have been successful or you clicked cancel. Please check the update folder. 
 		else 
 			MsgBox, some other crazy error occured. 
+
 Return 
