@@ -977,7 +977,7 @@ HelpAbout:
 FileReadLine, VNum, %A_WorkingDir%\..\version.txt, 1
 Gui, About:+owner1  ; Make the main window (Gui #1) the owner of the "about box".
 Gui +Disabled  ; Disable main window.
-Gui, About:Add, Text, gLaunchAbout, See github.com/mattahk/ahk-battleship for development details.`nGo to github.com\mattahk for other autohotkey games.`nThe current version is %VNum%
+Gui, About:Add, Text, gLaunchAbout, See github.com/mattahk/ahk-battleship for development details.`nGo to github.com\mattahk for other autohotkey games.`nThe current version is %VNum%`nYou made add the word beta to the second line of version.txt for beta releases.
 Gui, About:Add, Button, Default, OK
 Gui, About:Show
 return

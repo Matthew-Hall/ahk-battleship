@@ -6,7 +6,7 @@ You can change the URL/ file name to whatever you want. It will download to what
 You also need to change line 22 to where the update version file is located.
 */
 
-#Warn
+;#Warn
 #NoEnv
 SendMode, Input 
 SetBatchLines -1
@@ -14,12 +14,20 @@ ListLines Off
 SetWorkingDir %A_ScriptDir% ;set to script directory to see files
 
 ; below is the URL name you would like to download. Filename is the name of the filename
-url = https://github.com/MattAHK/ahk-battleship/archive/Matt's-Working-Branch.zip
 Filename = Update.zip
 
 FileReadLine, VNum, %A_WorkingDir%\version.txt, 1
 	if ErrorLevel = 1
-	Vnum = 0
+	VNum = 0
+	VURLadd = https://raw.githubusercontent.com/MattAHK/ahk-battleship/master/version.txt
+	url = https://github.com/MattAHK/ahk-battleship/archive/master.zip
+
+FileReadLine, BNum, %A_WorkingDir%\version.txt, 2
+	if ErrorLevel = 1
+		BNum = You will be automatically given the most recent stable release.
+	else BNum = You are setup for Beta access.
+	VURLadd = https://raw.githubusercontent.com/MattAHK/ahk-battleship/Matt's-Working-Branch/version.txt
+	url = https://github.com/MattAHK/ahk-battleship/archive/Matt's-Working-Branch.zip
 
 whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
 whr.Open("GET", "https://raw.githubusercontent.com/MattAHK/ahk-battleship/Matt's-Working-Branch/version.txt", true)
@@ -28,7 +36,7 @@ whr.Send()
 whr.WaitForResponse()
 version := whr.ResponseText
 
-MsgBox, 1, Press OK to download, Your current version is %Vnum%. This latest is %version%.
+MsgBox, 1, Press OK to download, Your current version is %Vnum%. The latest is %version%. %Bnum%
 	IfMsgBox OK
 		UrlDownloadToFile, *0 %url%, %A_WorkingDir%\%Filename%
 		if ErrorLevel = 1
