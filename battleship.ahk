@@ -5,9 +5,11 @@
 SetWorkingDir %A_ScriptDir%\Resources\
 
 Menu, FileMenu, Add, &Start, FileStart
+Menu, FileMenu, Add, R&estart, FileRestart
 Menu, FileMenu, Add, &Check for Update, FileUpdate
 Menu, FileMenu, Add, E&xit, FileExit
 
+Menu, HelpMenu, Add, &Rules, HelpRules
 Menu, HelpMenu, Add, &About, HelpAbout
 
 Menu, MyMenuBar, Add, &File, :FileMenu
@@ -78,8 +80,10 @@ Gui, Add, Text, x309 y331 w12 h12 cFFFFFF, 10
 Gui, Add, Text, x375 y382 w110 h12 cFFFFFF, Shipyard
 Gui, Add, GroupBox, x375 y389 w110 h300 ,
 
-Gui, Add, Picture, x380 y652 w30 h30 gWhiteChoice, %A_WorkingDir%\peggedbox.png
-Gui, Add, Picture, x415 y652 w30 h30 gRedChoice, %A_WorkingDir%\redpeggedbox.png
+Gui, Add, Picture, x380 y652 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x380 y652 w30 h30 gWhiteChoice +BackgroundTrans, %A_WorkingDir%\peggedbox.png
+Gui, Add, Picture, x415 y652 w30 h30 , %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x415 y652 w30 h30 gRedChoice +BackgroundTrans, %A_WorkingDir%\redpeggedbox.png
 Gui, Add, Picture, x450 y652 w30 h30 gBackChoice, %A_WorkingDir%\gridbox.png
 Gui, Add, Picture, x450 y617 w30 h30 vRotatoVar gRotato, %A_WorkingDir%\rotato.png
 
@@ -309,312 +313,312 @@ Gui, Add, Picture, x240 y660 w30 h30 gPeggers98, %A_WorkingDir%\gridbox.png
 Gui, Add, Picture, x270 y660 w30 h30 gPeggers99, %A_WorkingDir%\gridbox.png
 Gui, Add, Picture, x300 y660 w30 h30 gPeggers100, %A_WorkingDir%\gridbox.png
 
-Gui, Add, Picture, x380 y402 w30 h150 v5BoatV gPickup, %A_WorkingDir%\5boat.png
-Gui, Add, Picture, x415 y402 w30 h120 v4BoatV gPickup, %A_WorkingDir%\4boat.png
-Gui, Add, Picture, x450 y402 w30 h90 vSBoatV gPickup, %A_WorkingDir%\sboat.png
-Gui, Add, Picture, x380 y557 w30 h90 v3BoatV gPickup, %A_WorkingDir%\3boat.png
-Gui, Add, Picture, x415 y557 w30 h60 v2BoatV gPickup, %A_WorkingDir%\2boat.png
+Gui, Add, Picture, x380 y402 w30 h150 gPickup, %A_WorkingDir%\5boat.png
+Gui, Add, Picture, x415 y402 w30 h120 gPickup, %A_WorkingDir%\4boat.png
+Gui, Add, Picture, x450 y402 w30 h90 gPickup, %A_WorkingDir%\sboat.png
+Gui, Add, Picture, x380 y557 w30 h90 gPickup, %A_WorkingDir%\3boat.png
+Gui, Add, Picture, x415 y557 w30 h60 gPickup, %A_WorkingDir%\2boat.png
 return
 
 Target1:
-Gui, Add, Picture, x30 y30 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y30 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target2:
-Gui, Add, Picture, x60 y30 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y30 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target3:
-Gui, Add, Picture, x90 y30 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y30 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target4:
-Gui, Add, Picture, x120 y30 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y30 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target5:
-Gui, Add, Picture, x150 y30 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y30 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target6:
-Gui, Add, Picture, x180 y30 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y30 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target7:
-Gui, Add, Picture, x210 y30 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y30 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target8:
-Gui, Add, Picture, x240 y30 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y30 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target9:
-Gui, Add, Picture, x270 y30 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y30 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target10:
-Gui, Add, Picture, x300 y30 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y30 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target11:
-Gui, Add, Picture, x30 y60 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y60 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target12:
-Gui, Add, Picture, x60 y60 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y60 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target13:
-Gui, Add, Picture, x90 y60 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y60 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target14:
-Gui, Add, Picture, x120 y60 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y60 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target15:
-Gui, Add, Picture, x150 y60 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y60 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target16:
-Gui, Add, Picture, x180 y60 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y60 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target17:
-Gui, Add, Picture, x210 y60 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y60 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target18:
-Gui, Add, Picture, x240 y60 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y60 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target19:
-Gui, Add, Picture, x270 y60 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y60 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target20:
-Gui, Add, Picture, x300 y60 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y60 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target21:
-Gui, Add, Picture, x30 y90 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y90 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target22:
-Gui, Add, Picture, x60 y90 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y90 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target23:
-Gui, Add, Picture, x90 y90 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y90 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target24:
-Gui, Add, Picture, x120 y90 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y90 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target25:
-Gui, Add, Picture, x150 y90 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y90 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target26:
-Gui, Add, Picture, x180 y90 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y90 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target27:
-Gui, Add, Picture, x210 y90 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y90 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target28:
-Gui, Add, Picture, x240 y90 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y90 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target29:
-Gui, Add, Picture, x270 y90 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y90 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target30:
-Gui, Add, Picture, x300 y90 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y90 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target31:
-Gui, Add, Picture, x30 y120 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y120 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target32:
-Gui, Add, Picture, x60 y120 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y120 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target33:
-Gui, Add, Picture, x90 y120 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y120 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target34:
-Gui, Add, Picture, x120 y120 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y120 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target35:
-Gui, Add, Picture, x150 y120 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y120 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target36:
-Gui, Add, Picture, x180 y120 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y120 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target37:
-Gui, Add, Picture, x210 y120 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y120 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target38:
-Gui, Add, Picture, x240 y120 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y120 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target39:
-Gui, Add, Picture, x270 y120 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y120 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target40:
-Gui, Add, Picture, x300 y120 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y120 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target41:
-Gui, Add, Picture, x30 y150 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y150 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target42:
-Gui, Add, Picture, x60 y150 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y150 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target43:
-Gui, Add, Picture, x90 y150 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y150 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target44:
-Gui, Add, Picture, x120 y150 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y150 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target45:
-Gui, Add, Picture, x150 y150 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y150 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target46:
-Gui, Add, Picture, x180 y150 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y150 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target47:
-Gui, Add, Picture, x210 y150 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y150 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target48:
-Gui, Add, Picture, x240 y150 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y150 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target49:
-Gui, Add, Picture, x270 y150 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y150 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target50:
-Gui, Add, Picture, x300 y150 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y150 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target51:
-Gui, Add, Picture, x30 y180 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y180 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target52:
-Gui, Add, Picture, x60 y180 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y180 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target53:
-Gui, Add, Picture, x90 y180 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y180 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target54:
-Gui, Add, Picture, x120 y180 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y180 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target55:
-Gui, Add, Picture, x150 y180 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y180 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target56:
-Gui, Add, Picture, x180 y180 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y180 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target57:
-Gui, Add, Picture, x210 y180 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y180 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target58:
-Gui, Add, Picture, x240 y180 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y180 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target59:
-Gui, Add, Picture, x270 y180 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y180 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target60:
-Gui, Add, Picture, x300 y180 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y180 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target61:
-Gui, Add, Picture, x30 y210 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y210 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target62:
-Gui, Add, Picture, x60 y210 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y210 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target63:
-Gui, Add, Picture, x90 y210 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y210 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target64:
-Gui, Add, Picture, x120 y210 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y210 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target65:
-Gui, Add, Picture, x150 y210 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y210 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target66:
-Gui, Add, Picture, x180 y210 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y210 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target67:
-Gui, Add, Picture, x210 y210 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y210 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target68:
-Gui, Add, Picture, x240 y210 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y210 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target69:
-Gui, Add, Picture, x270 y210 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y210 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target70:
-Gui, Add, Picture, x300 y210 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y210 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target71:
-Gui, Add, Picture, x30 y240 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y240 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target72:
-Gui, Add, Picture, x60 y240 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y240 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target73:
-Gui, Add, Picture, x90 y240 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y240 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target74:
-Gui, Add, Picture, x120 y240 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y240 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target75:
-Gui, Add, Picture, x150 y240 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y240 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target76:
-Gui, Add, Picture, x180 y240 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y240 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target77:
-Gui, Add, Picture, x210 y240 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y240 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target78:
-Gui, Add, Picture, x240 y240 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y240 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target79:
-Gui, Add, Picture, x270 y240 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y240 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target80:
-Gui, Add, Picture, x300 y240 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y240 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target81:
-Gui, Add, Picture, x30 y270 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y270 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target82:
-Gui, Add, Picture, x60 y270 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y270 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target83:
-Gui, Add, Picture, x90 y270 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y270 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target84:
-Gui, Add, Picture, x120 y270 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y270 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target85:
-Gui, Add, Picture, x150 y270 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y270 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target86:
-Gui, Add, Picture, x180 y270 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y270 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target87:
-Gui, Add, Picture, x210 y270 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y270 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target88:
-Gui, Add, Picture, x240 y270 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y270 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target89:
-Gui, Add, Picture, x270 y270 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y270 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target90:
-Gui, Add, Picture, x300 y270 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y270 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target91:
-Gui, Add, Picture, x30 y300 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y300 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target92:
-Gui, Add, Picture, x60 y300 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y300 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target93:
-Gui, Add, Picture, x90 y300 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y300 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target94:
-Gui, Add, Picture, x120 y300 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y300 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target95:
-Gui, Add, Picture, x150 y300 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y300 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target96:
-Gui, Add, Picture, x180 y300 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y300 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target97:
-Gui, Add, Picture, x210 y300 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y300 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target98:
-Gui, Add, Picture, x240 y300 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y300 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target99:
-Gui, Add, Picture, x270 y300 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y300 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Target100:
-Gui, Add, Picture, x300 y300 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y300 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 
 Rotato:
@@ -643,304 +647,304 @@ Pickup(hCtrl) { ; to be placed on a grid of squares credit: wolf_II https://auto
 }
 
 Peggers1:
-Gui, Add, Picture, x30 y390 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y390 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers2:
-Gui, Add, Picture, x60 y390 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y390 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers3:
-Gui, Add, Picture, x90 y390 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y390 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers4:
-Gui, Add, Picture, x120 y390 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y390 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers5:
-Gui, Add, Picture, x150 y390 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y390 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers6:
-Gui, Add, Picture, x180 y390 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y390 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers7:
-Gui, Add, Picture, x210 y390 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y390 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers8:
-Gui, Add, Picture, x240 y390 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y390 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers9:
-Gui, Add, Picture, x270 y390 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y390 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers10:
-Gui, Add, Picture, x300 y390 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y390 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers11:
-Gui, Add, Picture, x30 y420 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y420 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers12:
-Gui, Add, Picture, x60 y420 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y420 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers13:
-Gui, Add, Picture, x90 y420 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y420 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers14:
-Gui, Add, Picture, x120 y420 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y420 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers15:
-Gui, Add, Picture, x150 y420 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y420 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers16:
-Gui, Add, Picture, x180 y420 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y420 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers17:
-Gui, Add, Picture, x210 y420 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y420 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers18:
-Gui, Add, Picture, x240 y420 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y420 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers19:
-Gui, Add, Picture, x270 y420 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y420 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers20:
-Gui, Add, Picture, x300 y420 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y420 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers21:
-Gui, Add, Picture, x30 y450 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y450 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers22:
-Gui, Add, Picture, x60 y450 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y450 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers23:
-Gui, Add, Picture, x90 y450 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y450 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers24:
-Gui, Add, Picture, x120 y450 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y450 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers25:
-Gui, Add, Picture, x150 y450 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y450 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers26:
-Gui, Add, Picture, x180 y450 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y450 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers27:
-Gui, Add, Picture, x210 y450 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y450 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers28:
-Gui, Add, Picture, x240 y450 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y450 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers29:
-Gui, Add, Picture, x270 y450 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y450 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers30:
-Gui, Add, Picture, x300 y450 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y450 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers31:
-Gui, Add, Picture, x30 y480 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y480 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers32:
-Gui, Add, Picture, x60 y480 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y480 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers33:
-Gui, Add, Picture, x90 y480 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y480 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers34:
-Gui, Add, Picture, x120 y480 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y480 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers35:
-Gui, Add, Picture, x150 y480 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y480 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers36:
-Gui, Add, Picture, x180 y480 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y480 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers37:
-Gui, Add, Picture, x210 y480 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y480 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers38:
-Gui, Add, Picture, x240 y480 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y480 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers39:
-Gui, Add, Picture, x270 y480 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y480 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers40:
-Gui, Add, Picture, x300 y480 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y480 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers41:
-Gui, Add, Picture, x30 y510 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y510 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers42:
-Gui, Add, Picture, x60 y510 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y510 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers43:
-Gui, Add, Picture, x90 y510 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y510 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers44:
-Gui, Add, Picture, x120 y510 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y510 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers45:
-Gui, Add, Picture, x150 y510 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y510 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers46:
-Gui, Add, Picture, x180 y510 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y510 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers47:
-Gui, Add, Picture, x210 y510 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y510 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers48:
-Gui, Add, Picture, x240 y510 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y510 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers49:
-Gui, Add, Picture, x270 y510 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y510 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers50:
-Gui, Add, Picture, x300 y510 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y510 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers51:
-Gui, Add, Picture, x30 y540 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y540 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers52:
-Gui, Add, Picture, x60 y540 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y540 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers53:
-Gui, Add, Picture, x90 y540 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y540 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers54:
-Gui, Add, Picture, x120 y540 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y540 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers55:
-Gui, Add, Picture, x150 y540 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y540 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers56:
-Gui, Add, Picture, x180 y540 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y540 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers57:
-Gui, Add, Picture, x210 y540 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y540 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers58:
-Gui, Add, Picture, x240 y540 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y540 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers59:
-Gui, Add, Picture, x270 y540 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y540 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers60:
-Gui, Add, Picture, x300 y540 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y540 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers61:
-Gui, Add, Picture, x30 y570 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y570 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers62:
-Gui, Add, Picture, x60 y570 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y570 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers63:
-Gui, Add, Picture, x90 y570 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y570 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers64:
-Gui, Add, Picture, x120 y570 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y570 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers65:
-Gui, Add, Picture, x150 y570 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y570 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers66:
-Gui, Add, Picture, x180 y570 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y570 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers67:
-Gui, Add, Picture, x210 y570 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y570 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers68:
-Gui, Add, Picture, x240 y570 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y570 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers69:
-Gui, Add, Picture, x270 y570 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y570 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers70:
-Gui, Add, Picture, x300 y570 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y570 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers71:
-Gui, Add, Picture, x30 y600 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y600 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers72:
-Gui, Add, Picture, x60 y600 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y600 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers73:
-Gui, Add, Picture, x90 y600 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y600 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers74:
-Gui, Add, Picture, x120 y600 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y600 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers75:
-Gui, Add, Picture, x150 y600 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y600 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers76:
-Gui, Add, Picture, x180 y600 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y600 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers77:
-Gui, Add, Picture, x210 y600 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y600 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers78:
-Gui, Add, Picture, x240 y600 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y600 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers79:
-Gui, Add, Picture, x270 y600 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y600 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers80:
-Gui, Add, Picture, x300 y600 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y600 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers81:
-Gui, Add, Picture, x30 y630 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y630 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers82:
-Gui, Add, Picture, x60 y630 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y630 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers83:
-Gui, Add, Picture, x90 y630 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y630 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers84:
-Gui, Add, Picture, x120 y630 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y630 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers85:
-Gui, Add, Picture, x150 y630 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y630 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers86:
-Gui, Add, Picture, x180 y630 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y630 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers87:
-Gui, Add, Picture, x210 y630 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y630 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers88:
-Gui, Add, Picture, x240 y630 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y630 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers89:
-Gui, Add, Picture, x270 y630 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y630 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers90:
-Gui, Add, Picture, x300 y630 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y630 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers91:
-Gui, Add, Picture, x30 y660 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x30 y660 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers92:
-Gui, Add, Picture, x60 y660 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x60 y660 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers93:
-Gui, Add, Picture, x90 y660 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x90 y660 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers94:
-Gui, Add, Picture, x120 y660 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x120 y660 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers95:
-Gui, Add, Picture, x150 y660 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x150 y660 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers96:
-Gui, Add, Picture, x180 y660 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x180 y660 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers97:
-Gui, Add, Picture, x210 y660 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x210 y660 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers98:
-Gui, Add, Picture, x240 y660 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x240 y660 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers99:
-Gui, Add, Picture, x270 y660 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x270 y660 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 Peggers100:
-Gui, Add, Picture, x300 y660 w30 h30 , %A_WorkingDir%\%pegchoice%
+Gui, Add, Picture, x300 y660 w30 h30 +BackgroundTrans, %A_WorkingDir%\%pegchoice%
 return
 
 
@@ -955,10 +959,25 @@ FileUpdate:
 }
 return
 
+FileRestart:
+Reload
+Sleep 1000 ; If successful, the reload will close this instance during the Sleep, so the line below will never be reached.
+MsgBox, 0, , The script could not be reloaded. Error 962. Press ctrl+c to copy this message.
+return
+
+HelpRules: 
+Gui, Rules:+owner1  ; Make the main window (Gui #1) the owner of the "about box".
+Gui +Disabled  ; Disable main window.
+Gui, Rules:Add, Text, gLaunchRules, Click here to see the game rules.`nAdditional Optional Rules:`n - Start a with 5 shot volley`n - Play with all 10 ships`n - Play multiple boards
+Gui, Rules:Add, Button, Default, OK
+Gui, Rules:Show
+return
+
 HelpAbout:
+FileReadLine, VNum, %A_WorkingDir%\..\version.txt, 1
 Gui, About:+owner1  ; Make the main window (Gui #1) the owner of the "about box".
 Gui +Disabled  ; Disable main window.
-Gui, About:Add, Text, gLaunchRules, Click here to see the game rules.`nSee github.com\mattahk\ahk-battleship for development details.`nGo to github.com\mattahk for other autohotkey games.
+Gui, About:Add, Text, gLaunchAbout, See github.com/mattahk/ahk-battleship for development details.`nGo to github.com\mattahk for other autohotkey games.`nThe current version is %VNum%
 Gui, About:Add, Button, Default, OK
 Gui, About:Show
 return
@@ -967,6 +986,13 @@ LaunchRules:
 Run https://www.cs.nmsu.edu/~bdu/TA/487/brules.htm
 return
 
+LaunchAbout: 
+Run https://github.com/MattAHK
+return
+
+RulesButtonOK:
+RulesGuiClose:
+RulesGuiEscape:
 AboutButtonOK:  ; This section is used by the "about box" above.
 AboutGuiClose:
 AboutGuiEscape:
@@ -976,12 +1002,4 @@ return
 
 FileExit:     ; User chose "Exit" from the File menu.
 GuiClose:
-ExitApp
-
-
-
-/*
-1. conditional buttons - if ships > or < 5 then can't start
-2. remove ships from shipyard somehow
-3. ship hp -- also to do alternate pictures
-*/
+ExitApp 
