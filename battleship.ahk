@@ -1,8 +1,13 @@
 #Warn
 #NoEnv
 #SingleInstance Off
-
+SetBatchLines -1
+ListLines Off
 SetWorkingDir %A_ScriptDir%\Resources\
+
+Gui, Add, Edit, x375 y24 w110 h140 ReadOnly hWndhLog
+Gui, Add, Edit, x375 y162 w110 h165 ReadOnly hWndhChat
+Gui, Add, Edit, x375 y327 w110 h20 vMessage
 
 Menu, FileMenu, Add, &Start, FileStart
 Menu, FileMenu, Add, R&estart, FileRestart
@@ -89,7 +94,7 @@ Gui, Add, Picture, x450 y617 w30 h30 vRotatoVar gRotato, %A_WorkingDir%\rotato.p
 Gui, Add, Picture, x450 y582 w30 h30, %A_WorkingDir%\gridbox.png
 Gui, Add, Picture, x450 y582 w30 h30 gPickup +BackgroundTrans, %A_WorkingDir%\permanentworkaround.png
 
-Gui, Add, Button, x393 y349 w75 h20 , Send
+Gui, Add, Button, x393 y349 w75 h20 , Send ;gSubmit
 Gui, Add, Button, x75 y349 w75 h20 , Hit
 Gui, Add, Button, x225 y349 w75 h20 , Miss
 
