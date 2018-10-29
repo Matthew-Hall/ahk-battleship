@@ -86,6 +86,8 @@ Gui, Add, Picture, x415 y652 w30 h30 , %A_WorkingDir%\gridbox.png
 Gui, Add, Picture, x415 y652 w30 h30 gRedChoice +BackgroundTrans, %A_WorkingDir%\redpeggedbox.png
 Gui, Add, Picture, x450 y652 w30 h30 gBackChoice, %A_WorkingDir%\gridbox.png
 Gui, Add, Picture, x450 y617 w30 h30 vRotatoVar gRotato, %A_WorkingDir%\rotato.png
+Gui, Add, Picture, x450 y582 w30 h30, %A_WorkingDir%\gridbox.png
+Gui, Add, Picture, x450 y582 w30 h30 gPickup +BackgroundTrans, %A_WorkingDir%\permanentworkaround.png
 
 Gui, Add, Button, x393 y349 w75 h20 , Send
 Gui, Add, Button, x75 y349 w75 h20 , Hit
@@ -968,7 +970,7 @@ return
 HelpRules: 
 Gui, Rules:+owner1  ; Make the main window (Gui #1) the owner of the "about box".
 Gui +Disabled  ; Disable main window.
-Gui, Rules:Add, Text, gLaunchRules, Click here to see the game rules.`nAdditional Optional Rules:`n - Start a with 5 shot volley`n - Play with all 10 ships`n - Play multiple boards
+Gui, Rules:Add, Text, gLaunchRules, Click HERE to see the game rules.`nAdditional Optional Rules:`n - Start a game with a 5 shot volley`n - Play with all 10 ships`n - Play multiple boards`n*Note: You cannot move the ships after setting them.`nIf you need to reset click file then restart.
 Gui, Rules:Add, Button, Default, OK
 Gui, Rules:Show
 return
@@ -977,7 +979,7 @@ HelpAbout:
 FileReadLine, VNum, %A_WorkingDir%\..\version.txt, 1
 Gui, About:+owner1  ; Make the main window (Gui #1) the owner of the "about box".
 Gui +Disabled  ; Disable main window.
-Gui, About:Add, Text, gLaunchAbout, See github.com/mattahk/ahk-battleship for development details.`nGo to github.com\mattahk for other autohotkey games.`nThe current version is %VNum%`nYou made add the word beta to the second line of version.txt for beta releases.
+Gui, About:Add, Text, gLaunchAbout, See github.com/mattahk/ahk-battleship for development details.`nGo to github.com/mattahk for other autohotkey games (or click HERE).`nThe current version is %VNum%`nYou may change the settings.ini file to the new update path for beta releases.
 Gui, About:Add, Button, Default, OK
 Gui, About:Show
 return
