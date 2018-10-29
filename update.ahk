@@ -1,41 +1,35 @@
-/*
-AutoHotkey Version 1.1.30.00
-Windows 10
-AutoHotkey updater. Used for various programs. 
-You can change the URL/ file name to whatever you want. It will download to whatever the current folder is. 
-You also need to change line 22 to where the update version file is located.
-*/
-
 #Warn
 #NoEnv
-SendMode, Input 
+
 SetBatchLines -1
 ListLines Off
 SetWorkingDir %A_ScriptDir% ;set to script directory to see files
 
-; below is the URL name you would like to download. Filename is the name of the filename
-url = https://github.com/MattAHK/ahk-battleship/archive/Matt's-Working-Branch.zip
 Filename = Update.zip
 
 FileReadLine, VNum, %A_WorkingDir%\version.txt, 1
 	if ErrorLevel = 1
-	Vnum = 0
+		VNum = 0
+		ErrorLevel =
+
+IniRead, url, %A_WorkingDir%\Resources\settings.ini, Features, Beta, https://github.com/MattAHK/ahk-battleship/archive/master.zip
+msgbox, %url%
 
 whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
-whr.Open("GET", "https://raw.githubusercontent.com/MattAHK/ahk-battleship/Matt's-Working-Branch/version.txt", true)
+whr.Open("GET", "https://raw.githubusercontent.com/MattAHK/ahk-battleship/master/version.txt", true)
 whr.Send()
 ; Using 'true' above and the call below allows the script to remain responsive.
 whr.WaitForResponse()
 version := whr.ResponseText
 
-MsgBox, 1, Press OK to download, Your current version is %Vnum%. This latest is %version%.
+MsgBox, 1, Press OK to download, Your current version is %Vnum%. The latest is %version%.
 	IfMsgBox OK
 		UrlDownloadToFile, *0 %url%, %A_WorkingDir%\%Filename%
 		if ErrorLevel = 1
-			MsgBox, There was some error updating the file. You may have the latest version, or it is blocked.
+			MsgBox, There was some error updating the file. You may have the latest version, hit cancel, or it is blocked.
 		else if ErrorLevel = 0
-			MsgBox, The update/ download appears to have been successful or you clicked cancel. Please check the update folder. 
+			MsgBox, The update/ download appears to have been successful. Please check the update folder. 
 		else 
-			MsgBox, some other crazy error occured. 
+			MsgBox, some error occured. 
 
 Return 
