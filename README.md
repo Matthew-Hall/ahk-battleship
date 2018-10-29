@@ -1,6 +1,9 @@
 # Autohotkey Battleship
 It's a battleship game written with AutoHotkey. Release 1.2 is now available!
 
+This is what it looked like as of version 1.1
+![alt text](https://raw.githubusercontent.com/MattAHK/ahk-battleship/blob/master/Product%20Screenshot.PNG)
+
 # How to Download
 1. Click on the release button
 2. Click on the zip file for the most recent release
