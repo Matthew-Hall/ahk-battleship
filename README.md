@@ -6,7 +6,7 @@ This is what it looked like as of version 1.1
 ![alt text](https://github.com/MattAHK/ahk-battleship/raw/master/Product%20Screenshot.PNG)
 
 # How to Download
-1. Click on the release button
+1. Click on the release button to the right of commits and branches in GitHub
 2. Click on the zip file for the most recent release
 3. Unzip and run battleship.ahk
 
@@ -32,3 +32,15 @@ Starting with version 1.0:
 Q: What's up with the weird version numbers?
 
 A: Major release, minor release, date, date's commit number
+
+Q: What do the hit and miss buttons do?
+
+A: At the moment they do nothing, their intent is to report a hit or miss into the chat. This should be implemented after the automation update. You'll see targets, hits, misses, and sinks through the chat and pegs will automatically be added to your board in relevant locations. 
+
+Q: What are the rules?
+
+A: Rules, with optional rules, are posted under help / rules in-game.
+
+Q: How do I post issues or suggestions?
+
+A: Signup for a GitHub account and post under the issues tab. I will check this regularly and add any accepted suggestions to the project list to be worked. 
