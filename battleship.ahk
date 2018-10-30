@@ -5,9 +5,14 @@ SetBatchLines -1
 ListLines Off
 SetWorkingDir %A_ScriptDir%\Resources\
 
-Gui, Add, Edit, x375 y24 w110 h140 ReadOnly hWndhLog
-Gui, Add, Edit, x375 y162 w110 h165 ReadOnly hWndhChat
 Gui, Add, Edit, x375 y327 w110 h20 vMessage
+Gui, Add, Edit, x375 y24 w110 h138 ReadOnly hWndhLog
+Gui, Add, Edit, x375 y162 w110 h165 ReadOnly hWndhChat
+
+Gui, Add, Picture, x375 y24 w110 h303 +BackgroundTrans, %A_WorkingDir%\Spiderweb_half_spider_out-512.png
+;Gui, Add, Picture, x50 y50 +BackgroundTrans, %A_WorkingDir%\PUMPKIN_PATCH_pumpkin_ICON.png
+;Gui, Add, Picture, x370 y108 w110 h205 +BackgroundTrans, %A_WorkingDir%\skeleton-3252843_960_720.png
+;Gui, Add, Picture, x375 y40 w100 h70 +BackgroundTrans, %A_WorkingDir%\PUMPKIN_PATCH_pumpkin_ICON.png
 
 Menu, FileMenu, Add, &Start, FileStart
 Menu, FileMenu, Add, R&estart, FileRestart
@@ -94,11 +99,11 @@ Gui, Add, Picture, x450 y617 w30 h30 vRotatoVar gRotato, %A_WorkingDir%\rotato.p
 Gui, Add, Picture, x450 y582 w30 h30, %A_WorkingDir%\gridbox.png
 Gui, Add, Picture, x450 y582 w30 h30 gPickup +BackgroundTrans, %A_WorkingDir%\permanentworkaround.png
 
-Gui, Add, Button, x393 y349 w75 h20 , Send ;gSubmit
+Gui, Add, Button, x393 y349 w75 h20 +default , Send ;gSubmit
 Gui, Add, Button, x75 y349 w75 h20 , Hit
 Gui, Add, Button, x225 y349 w75 h20 , Miss
 
-Gui, Color, 1c3968
+Gui, Color, 1e165b
 Gui, Show, x590 y118 h718 w500, Battleship
 Return
 
